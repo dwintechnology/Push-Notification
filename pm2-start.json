@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "Push Notification server",
+      "script": "dist/index.js",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "watch": false,
+      "out_file": "dist/logs.log",
+      "error_file": "dist/logs.log",
+      "merge_logs": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
